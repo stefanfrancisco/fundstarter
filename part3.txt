@@ -1,0 +1,3 @@
+Synchronous: Executes one operation at a time. Better if operations are light.
+Asynchronous: Never waits for operation to be completed. Used for heavy loads that can be run in the background while in use.
+I would assume Read, Open, Buffer.toString would be most efficient as it utilizes binary data to compose strings.
