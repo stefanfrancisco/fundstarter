@@ -1,0 +1,11 @@
+var http = require('http');
+var port = Number(process.env.PORT || 8080);
+var fs = require("fs");
+
+var data = fs.readFileSync('public/index.html');
+console.log("Program ended");
+
+var server = http.createServer(function(request, response) {
+fs.readFile('./index.html', function(error, data) {
+	if(error){
+		response.writeHead(404, {
