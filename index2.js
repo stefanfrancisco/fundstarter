@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require("fs");
 var buf = new Buffer(2488)
+var port = Number(process.env.PORT || 8080);
 fs.open('public/index.html', 'r+', function(err, fd){
         if(err) {
                 return console.error(err);
@@ -18,4 +19,4 @@ fs.open('public/index.html', 'r+', function(err, fd){
         contentType = 'text/html';
         response.writeHead(200, {'Content-Type' : contentType});
         response.write(buf.toString());
-        }).listen(8080);
+        }).listen(port);
