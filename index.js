@@ -15,6 +15,6 @@ var server = http.createServer(function(request, response) {
   });
 });
 
-server.listen(8080, function() {
+server.listen(port, function() {
   console.log('Server started.');
 })
